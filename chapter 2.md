@@ -123,25 +123,36 @@ Movement Components 提供了朝着 Actor（或角色）所作的一种形式的
 物理组件用于影响那些在您的场景中以不同方式应用物理效果的任意对象。 
 - Destructible Component （可毁组件）：DestructibleComponent 用于存放 Destructible Actor 的物理数据。在添加该组件作为子对象时，您必须指定要使用的 Destructible Mesh 资源。
 <div align="center"> <img src="image\4-4.jpg" width="500"/> </div><br>
+
 - Physics Constraint Component （物理约束组件）：PhysicsConstraintComponent 是一种能连接两个刚性物体的接合点，通过使用一个 PhysicsConstraintComponent 和两个 StaticMeshComponents，您可以创建悬摆型对象，如秋千、重沙袋或标牌，它们可以对世界中的物理作用做出响应，让玩家与组件进行互动。
 <div align="center"> <img src="image\4-5.jpg" width="500"/> </div><br>
+
 - Physics Handle Component （物理句柄组件）：PhysicsHandleComponent 用于“抓取”和“移动”物理对象，同时让您抓取的对象继续使用物理效果。这样的例子可能以“重力枪”的形式存在，此时您可以拾取和掉落物理对象。
 <div align="center"> <img src="image\4-6.jpg" width="500"/> </div><br>
+
 - Physics Thruster Component （物理推进器组件）：PhysicsThrusterComponent 适用于沿着 X 轴负方向施加特定物理作用力的对象（例如，您所推动的方向上的 X 点）。推力组件使用连续作用力，而且能通过脚本来自动激活、一般激活或取消激活。 
 <div align="center"> <img src="image\4-7.jpg" width="500"/> </div><br>
+
 - Radial Force Component （径向力组件）：RadialForceComponent 用于发出径向力或脉冲来影响物理对象或可摧毁对象。与 PhysicsThrusterComponent 不同，这类组件会施加“发射后不用管”类型的作用力，而且并不持续。 
 <div align="center"> <img src="image\4-8.jpg" width="500"/> </div><br>
+
 ### 7. 渲染组件
 渲染组件影响游戏场景或物体如何渲染表现。
 - Atmospheric Fog Component （大气雾组件）：AtmosphericFogComponents 用于创建雾化效果，如场景中的云或大气雾。该组件拥有几项可调整的设置，可以影响此效果在关卡中的生成方式。
 ><div align="center"> <img src="image\4-9.jpg" width="500"/> </div><br> <div align="center"> <img src="image\4-10.jpg" width="500"/> </div><br>
+
 - Exponential Height Fog Component （指数高度雾组件）：ExponentialHeightFogComponent 用于创建雾化效果，而其密度与雾的高度相关。指数级高度雾在地图中较低的地方产生密度较大的雾，在较高的地方产生密度较小的雾。随着您增加高度，雾会进行平滑的过渡，您不会看到明显的切换效果。
 <div align="center"> <img src="image\4-11.jpg" width="500"/> </div><br>
+
 - Decal Component （贴花组件）:DecalComponent 是一个被渲染到网格模型表面上的材质（一种适用于模型的“保险杠标贴”）。贴花组件可用于任何目的，如发射子弹时在墙上撞出的痕迹，车辆在道路上擦出的打滑印记，被击中时在地上溅出的血迹等（下面有一个相关的示例）。 
 <div align="center"> <img src="image\4-12.jpg" width="500"/> </div><br>
+
 - Text Render Component （字体渲染组件）:TextRenderComponent 可以用指定的字体渲染世界中的文本。其中包含与常用字体有关的属性，如 Scale、Alignment、Color 等。
 <div align="center"> <img src="image\4-13.jpg" width="500"/> </div><br>
+
 - Vector Field Component （向量场组件）:VectorFieldComponent 用于引用 Vector Field，这是一种带有速度向量网格的 3D 容器，可用于确定 GPU 子画面的速度或加速度。 向量场可用于场景中的小规模效果（如强风粒子效果）和大规模效果（如暴雪）。
 <div align="center"> <img src="image\4-14.jpg" width="500"/> </div><br>
+
 - Billboard Component （看板组件）:BillboardComponent 是一个会被渲染为始终朝向摄像机的 2D 贴图，其功能与 ArrowComponent 类似，可用于某种放置方法且能够轻松选取。
+
 - Post Process Component （后处理组件）:PostProcessComponets 可以为 Blueprints 开启后处理控制。它将使用一个父级 UShapeComponent 来提供体积数据（如可用）。这类组件可以在某一场景应用了后处理设置时变换场景的色调。
