@@ -96,7 +96,7 @@ AI 组件是一种可令 Pawn 从环境接收类似感知数据的组件，如�
 CameraComponent （添加一个摄像机视角）和 SpringArmComponent （使其子项延长固定距离，然后在发生碰撞时收回），这两个组件一起使用，可提供一个第三人称视角，您可在游戏世界中对其进行各种调节。
 - Camera Component （摄像机组件）：摄像机组件可以让您添加一个摄像机视角作为 Actor 的子对象。如果 ViewTarget 是 CameraActor，或者 Actor 包含摄像机组件且它的 bFindCameraComponentWhenViewTarget 选项设置为 True。 例如，如果在游戏过程中，您想要在关卡中切换多个摄像机。通过使用 SetViewTargetWithBlend 和 CameraActor，您可在各摄像机之间进行切换，并使用在 CameraActor 中为各摄像机定义的属性（包括视野、角度或任何后处理效果等）。 
 - Spring Arm Component （弹簧臂组件）：弹簧臂组件会努力与其子对象之间保持一个固定距离，但如果发生碰撞，就会使子对象收回，如果没有碰撞，则使之发生回弹。通常，弹簧臂组件用作“摄像机摇臂”，可防止玩家的跟拍摄像机在游戏时间中发生碰撞。
-
+<div align="center"> <img src="\image\4-1.jpg" width="500"/> </div><br>
 ![摄像机和弹簧臂组件](\image\4-1.jpg)
 
 ### 3. 灯光组件
