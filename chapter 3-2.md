@@ -19,25 +19,25 @@
 #### 3. 动态光照
 - 可移动光源和光照函数
 - 光线追踪距离场柔和阴影：可移动光源产生的阴影是使用每个刚性网格体的对象距离场，计算来自动态光源的有效区域阴影而得出的。在虚幻引擎4（UE4）中，有一个 光线追踪距离场阴影（RTDF）。为了计算阴影，从要计算阴影的点朝着每个光源，通过有向距离场（SDF）跟踪光线。 使用到遮挡物的最近距离估算椎体追踪，所耗成本与光线追踪相同。它让球形光源形状能 实现高质量区域阴影。
-![](\image\6-1.jpg) 
+<div align="center"> <img src="image\6-1.jpg" width="500"/> </div><br> 
 
 -距离场环境光遮蔽：使用有向距离场体积能获得可移动天空光照的阴影；该有向距离场体积在各刚性网格体周围预计算，以产生中等范围的环境光遮蔽。在虚幻引擎4（UE4）中，这被称为 距离场环境光遮蔽（Distance Field Ambient Occlusion）（DFAO）。其支持动态场景变化；刚性网格体可移动或隐藏，其会影响遮蔽。与屏幕空间环境光遮蔽不同，遮蔽在场景空间遮挡物中进行计算，因此出屏丢失数据不会导致瑕疵。
-![OFF](\image\6-2.jpg) ![ON](\image\6-3.jpg)
+<div align="center"> <img src="image\6-2.jpg" width="500"/> </div><br> <div align="center"> <img src="image\6-3.jpg" width="500"/> </div><br>
 
 - 接触阴影：为应用程序创建场景和角色时，有时需添加渲染的视觉深度。添加 接触阴影 是改善场景视觉深度和保真度的有效方法。 因为提供了一个更为准确的阴影近似，实现其他阴影算法难以达到的波状外形阴影。 
-![](\image\6-4.jpg)
+<div align="center"> <img src="image\6-4.jpg" width="500"/> </div><br>
 
 - 胶囊体阴影：虚幻引擎 4（UE4）现能通过 胶囊体阴影 完成对光照区域中角色的柔和阴影支持。胶囊体是代表角色的一个物理资源。 这种投影法会将角色投射在非直接光照区域中的地面上，并在直接光照区域产生柔和阴影。
-![](\image\6-5.jpg)
+<div align="center"> <img src="image\6-5.jpg" width="500"/> </div><br>
 
 #### 4. 综述
 - 体积雾：虚幻引擎从 4.16 版本起开始支持体积雾（Volumetric Fog）。此法将计算计算机视锥中每个点上参与媒介的密度和光照，以便支持影响雾的各种密度以及任意数量的光照。 
-![](\image\6-6.jpg)
+<div align="center"> <img src="image\6-6.jpg" width="500"/> </div><br>
 
 - 环境光遮蔽：屏幕空间环境光遮挡（SSAO）是一种近似计算因遮蔽而造成的光线衰减的效果。通常是在标准全局光照的基础上增添细微效果，例如让角落、裂缝或其他生物变暗，以形成一种更加自然真实的视觉效果。
-![没有SSAO](\image\6-7.jpg)
-![仅有SSAO](\image\6-8.jpg)
-![有SSAO](\image\6-9.jpg)
+<div align="center"> <img src="image\6-7.jpg" width="500"/> </div><br>
+<div align="center"> <img src="image\6-8.jpg" width="500"/> </div><br>
+<div align="center"> <img src="image\6-9.jpg" width="500"/> </div><br>
 
 - 光束：利用定向光源模拟真实曙暮光效果或大气散射的阴影，即可生成 光束。这些光线为场景添加深度和真实度。 
-![](\image\6-10.jpg)
+<div align="center"> <img src="image\6-10.jpg" width="500"/> </div><br>
