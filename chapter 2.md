@@ -1,14 +1,14 @@
-# 二、 Unreal Editor 手册
+# 第二章、 Unreal Editor 手册
 
-## 1. 基本操作
+## 第一节、 基本操作
 
-### ①获取帮助
+### 1. 获取帮助
 - 富工具提示：某些工具提示有一个“富工具提示”，此时按下（Ctrl + Alt）可以了解更多信息文本。
 - 帮助图标：编辑器的某些部分旁边可能会显示 “?” 图标，这链接至外部文档。
 - 帮助菜单：在窗口按下"F1"可打开相应文档页面。
 - 帮助搜索：您可以使用编辑器主窗口右上角的“帮助搜索”栏来搜索帮助。 
 
-### ②控制Actor
+### 2. 控制Actor
 
 | 操作 | 行为 |
 | :--: | -- |
@@ -24,33 +24,33 @@
 | Shift + E | 依照当前选中的 Actor，选择关卡中所有同类型的其他 Actor |
 | Ctrl + 鼠标左键 | 将该 Actor 添加到当前选中 Actor 的集合中 |
 
-### ③运行和模拟
+### 3. 运行和模拟
 虚幻编辑器允许在关卡中任何地方生成玩家,且可以立即从编辑器中预览游戏，不必等待保存文件。有两种可用的预览模式： Play In Editor（在编辑器中运行） (PIE) 功能可以通过位于主工具条上的 Play（运行） 按钮直接访问， 而 Simulate In Editor（在编辑器中模拟） (SIE) 功能则可以通过 Play(运行) 按钮的下拉菜单中访问(或则会按下 Alt+S 键)。 
 
-## 2. 关卡
-### ①使用关卡资源
+## 第二节、 关卡
+### 1. 使用关卡资源
 - 创建：在 Content Browser 中创建关卡的方法和 创建其他资源 相同，如蓝图类、材质，或粒子系统。然而也可从 File 菜单创建关卡，因为它们是项目的布局和组织。 
 - 保存：最初保存后的关卡保存是一个极为透明的过程，可从 File 菜单或 Content Browser 开始，但首次保存需要执行几个额外的步骤。
 - 打开：在 Content Browser 中双击关卡资源可打开关卡。和创建关卡一样，也可通过 File 菜单执行。 
 
-### ②管理多个关卡
+### 2. 管理多个关卡
 关卡通过 关卡（Levels） 窗口来管理。您可以通过 Windows 菜单访问 关卡（Levels） 窗口。 
 
 您将始终拥有一个 固定关卡（Persistent Level），同时您可以拥有一个或多个子关卡，这些关卡将始终加载或使用关卡流送体积（Level Streaming Volume）、蓝图（Blueprint）或C++代码加载流送。
 
-### ③世界场景设置
+### 3. 世界场景设置
 通过 World Settings 选项将特有设置应用到每个关卡。通过 World Settings 选项可执行一系列操作，从游玩关卡时启动正确的 游戏模式，到调整关卡的全局照明。 
 
-### ④变更默认关卡
+### 4. 变更默认关卡
 在 项目设置 编辑器中可对一些项目特定设置进行修改。其中包括对项目玩家载入的关卡进行设置。在默认游戏关卡外还可设置一个默认编辑器关卡，即时载入经常使用的关卡，加快工作流程。 
 
-### ⑤通过关卡分段进行协作
+### 5. 通过关卡分段进行协作
 关卡是二进制资源，团队成员在项目相同部分协同工作时可能面临一些挑战。 
 
 设置“固定流动”的关卡分段后，多名开发人员即可同时在同一个游戏“空间”中进行工作。例如可设置一个包含场景所有音频的关卡分段，以及包含场景布局静态网格体的关卡分段。每个关卡分段仅限单人单次操作。对场景的 Actor 进行仔细分割后，即可将重复工作的区域缩减到最少。 
 
-## 3. Actor和几何体
-### ①常见Actor类型
+## 第三节、 Actor和几何体
+### 1. 常见Actor类型
 | 类型 | 图标 | 描述 |
 | :--: | :--: | -- |
 | 网格物体 & 几何体Actor类型 | | |
@@ -69,7 +69,7 @@
 | ParticleEmitter  | ![](\image\3-12.png)| 粒子发射器 是一种用于通过以平面粒子（相机朝向的平面）或网格物体的方式生成粒子来创建特效(比如烟雾、火焰、火花等)的Actor。粒子的实际行为定义在特殊的资源粒子系统中并由粒子系统进行控制 |
 | AmbientSound  | ![](\image\3-13.png)| 环境音效Actors用于在世界中以Sound Cue的形式播放音效。这些音效可以时循环播放的也可以是非循环播放的，可以具有空间化及衰减效果，但所有这些必须在SoundCue中进行设置，而没有暴露在环境音效Actor本身上。 |
 
-### ②Actor操作
+### 2. Actor操作
 - 放置：在最基本的关卡上，Actor是您可以放置在关卡中的任何对象
 - 选择：简单选择、场景大纲选择、区域选择框选择和高级选择技术
 - 变换：变换是Actor移动、旋转或缩放
@@ -83,36 +83,36 @@
 | Shift+G+G | 取消分组 |
 | Ctrl+Shift+G | 切换组模式 |
 
-## 4. 组件
+## 第四节、 [组件](https://docs.unrealengine.com/zh-CN/Engine/Components/index.html)
 组件（Component） 是可添加到Actor的一项功能。组件不可独立存在，但在将其添加到Actor后，该Actor便可以访问并可以使用该组件所提供的功能。
 
-### ①AI组件
+### 1. AI组件
 AI 组件是一种可令 Pawn 从环境接收类似感知数据的组件，如噪声来源位置或 Pawn 是否可看到东西。 
 - AI Perception Component（ AI 感知组件）：AIPerceptionComponent 用于注册为 AIPerceptionSystem 中的刺激信号监听器，并可收集已注册的刺激信号。当组件获得新刺激信号 (batched) 时，将调用 UpdatePerception。 
 - Pawn Noise Emitter Component （Pawn 噪声发射器组件）：PawnNoiseEmitterComponent 追踪 SensingComponents 所使用的噪声事件数据以监听 Pawn。该组件用于存在于 Pawn 上或其控制器上。其在网络客户端上不进行任何操作。 
 - Pawn Sensing Component （Pawn 感应组件）：Pawn 感应组件可包含 Actor 的感知（即，视觉和听觉）设置及功能，允许 Actor 在游戏世界中看到/听到 Pawn。其在网络客户端上不进行任何操作。 
 
-### ②摄像机组件
+### 2. 摄像机组件
 CameraComponent （添加一个摄像机视角）和 SpringArmComponent （使其子项延长固定距离，然后在发生碰撞时收回），这两个组件一起使用，可提供一个第三人称视角，您可在游戏世界中对其进行各种调节。
 - Camera Component （摄像机组件）：摄像机组件可以让您添加一个摄像机视角作为 Actor 的子对象。如果 ViewTarget 是 CameraActor，或者 Actor 包含摄像机组件且它的 bFindCameraComponentWhenViewTarget 选项设置为 True。 例如，如果在游戏过程中，您想要在关卡中切换多个摄像机。通过使用 SetViewTargetWithBlend 和 CameraActor，您可在各摄像机之间进行切换，并使用在 CameraActor 中为各摄像机定义的属性（包括视野、角度或任何后处理效果等）。 
 - Spring Arm Component （弹簧臂组件）：弹簧臂组件会努力与其子对象之间保持一个固定距离，但如果发生碰撞，就会使子对象收回，如果没有碰撞，则使之发生回弹。通常，弹簧臂组件用作“摄像机摇臂”，可防止玩家的跟拍摄像机在游戏时间中发生碰撞。
 
 ![摄像机和弹簧臂组件](\image\4-1.jpg)
 
-### ③灯光组件
+### 3. 灯光组件
 不同类型的 Light Components 可将光照添加为 Actor 的子对象，取决于您想要实现的效果。无论您选择哪种灯光组件类型，都有一些总体灯光设置（灯光颜色或强度）或单独设置（参见各独立灯光的特定设置）可供调节。
 - Directional Light Component （方向性灯光组件）：DirectionalLightComponent 模拟了从无穷远的光源发射出的灯光。这也就是说，这种灯光所投射的所有阴影都是平行的，使其成为模拟阳光的最佳选择。 
 - Point Light Component （点灯光组件）：PointLightComponent 感觉上很像是现实世界中的灯泡，从灯泡的钨丝向着所有方向发射灯光。但是，为了提高运行性能，点光源组件被简化了，只从空间中的一个点均匀地向所有方向发射光线。 
 - Sky Light Component （天空灯光组件）：SkyLightComponents 用于捕捉关卡中的远距离物体（距离大于 SkyDistanceThreshold 的所有物体），并将其作为灯光应用到场景中。这也就是说，天空的外观及其光线/反射将匹配。 
 - Spot Light Component （射光圈组件）：SpotLightComponent 从锥形的单点发射出方向性光线。有一些设置可调节内锥角和外锥角，另外还有一些其他类型的光线设置，如强度、光线颜色和阴影设置。这种光线很适合作为手电筒，因为它可以定义内/外锥角半径。 
 
-### ④移动组件
+### 4. 移动组件
 Movement Components 提供了朝着 Actor（或角色）所作的一种形式的移动，移动组件是该 Actor（或角色）的子对象。 
 - Character Movement Component （人物移动组件）：CharacterMovementComponent 允许形象不使用物理刚体移动（走、跑、跳、飞、跌落和游泳）。 该组件专用于 Characters，任何其他类无法执行它。在创建 Blueprints 时，将根据角色类自动添加该组件，而不是手动添加。 
 - Projectile Movement Component （抛射物移动组件）：在转动过程中，ProjectileMovementComponent 会更新另一个组件的位置。碰撞后弹跳以及朝着目标归位等行为由此类组件支持。 
 - Rotating Movement Component （旋转移动组件）：RotatingMovementComponent 以指定旋转速率执行组件的连续旋转，也可围绕枢轴点偏置旋转。请记住，在移动过程中，无法进行碰撞测试。使用旋转移动组件的示例可以是飞机的螺旋桨、风车，甚至是一系列围绕太阳旋转的星球。 
 
-### ⑤寻路组件
+### 5. 寻路组件
 寻路组件是一种可在虚幻引擎 4 中修改或扩展 NavMesh(Pathfinding) 系统功能的组件。 
 - Nav Modifier Component （导航修改器组件）：Nav Modifier Component 本身没有任何功能，但是，如果您有一个基本形状组件作为 Actor 的根，该根组件的音量将根据导航修改器组件的 Area Class 属性来修改 Actor 内的 NavMesh 生成。这些区域类可定义基本设置（如 Cost）以输入一个区域，或更加高级的设置，如蹲伏角色可移动的区域。
 >成本是 NavMesh 系统的重要概念。简单地来说，使用 NavMesh 从一个点移动到另一个点的总成本等于所有移动路径的区域成本总和（单个区域的大小在项目首选项中定义）。但是，求解器将始终寻找成本最低的路径，因此，您可通过增加通过该区域的成本来让它避免某些区域（如湿滑的油腻地区或崎岖不平的地区）。例如，通过红色区域的成本非常高，但是 Pawn 没有其他选择，只能从中通过:
@@ -120,7 +120,7 @@ Movement Components 提供了朝着 Actor（或角色）所作的一种形式的
 但是，如果您移除了墙壁,Pawn 将避免经过红色区域，即使它要绕更长的路线:
 ![](\image\4-3.jpg)
 
-### ⑥物理组件
+### 6. 物理组件
 物理组件用于影响那些在您的场景中以不同方式应用物理效果的任意对象。 
 - Destructible Component （可毁组件）：DestructibleComponent 用于存放 Destructible Actor 的物理数据。在添加该组件作为子对象时，您必须指定要使用的 Destructible Mesh 资源。
 ![可毁的玻璃](\image\4-4.jpg)
@@ -132,7 +132,7 @@ Movement Components 提供了朝着 Actor（或角色）所作的一种形式的
 ![物理推进](\image\4-7.jpg)
 - Radial Force Component （径向力组件）：RadialForceComponent 用于发出径向力或脉冲来影响物理对象或可摧毁对象。与 PhysicsThrusterComponent 不同，这类组件会施加“发射后不用管”类型的作用力，而且并不持续。 
 ![径向力](\image\4-8.jpg)
-### ⑦渲染组件
+### 7. 渲染组件
 渲染组件影响游戏场景或物体如何渲染表现。
 - Atmospheric Fog Component （大气雾组件）：AtmosphericFogComponents 用于创建雾化效果，如场景中的云或大气雾。该组件拥有几项可调整的设置，可以影响此效果在关卡中的生成方式。
 >![密度衰减高度为0.5 (8 km)](\image\4-9.jpg) ![密度衰减高度为0.35 (2.744 km)](\image\4-10.jpg)
